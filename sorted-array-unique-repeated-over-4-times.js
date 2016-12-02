@@ -1,7 +1,8 @@
 var a1 = [1,1,1,1,1,2,2,2,2,7,9,9,9,9,9,9,12,12,99,99,99,99];
 var a2 = [1,47,2];
 var a3 = [1,77,4,4,4,4,4,4,4,4,4,4, 6,6,8,8,8,8,8];
-
+var a4 = [-20,-40,-10];
+var a5 = [];
 
 
 function moreThanFour(array) {
@@ -33,14 +34,17 @@ function moreThanFour(array) {
 }
 
 function max(array){
-  //find the max of an array
-  var max=0;
+  if(array.length===0){
+    return "array empty";
+  } else{
+    var max=array[0];
   for(i=0; i<array.length; i++){
     if(array[i]>max){
       max=array[i];
     }
   }
   return max;
+  }
 }
 
 console.log(moreThanFour(a1));
@@ -50,3 +54,5 @@ console.log(moreThanFour(a3));
 console.log(max(a1));
 console.log(max(a2));
 console.log(max(a3));
+console.log(max(a4));
+console.log(max(a5));
